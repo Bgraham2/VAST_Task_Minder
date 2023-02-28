@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">VAST Task Minder</string>
+    <string name="daily_tasks">Daily Tasks</string>
+    <string name="master_list">Master List</string>
+    <string name="add_daily_task">Add Daily Task</string>
+    <string name="start_timers">Start Timers</string>
+    <string name="selected_task">Selected Task:</string>
+    <string name="enter_daily_task_name">Enter Daily Task Name</string>
+    <string name="close">Close</string>
+    <string name="add_task">Add Task</string>
+    <string name="master_list_label">Master List</string>
+</resources>
