@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,12 +36,7 @@ public class MainActivity extends AppCompatActivity implements ReturnTask {
 
     private void initMasterTaskButton() {
         Button masterListButton = findViewById(R.id.buttonMasterList);
-        masterListButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+        masterListButton.setOnClickListener(view -> startActivity(new Intent(MainActivity.this, MasterListActivity.class)));
     }
 
     private void initItemTouchHelper() {
