@@ -31,17 +31,18 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <Button
+            android:id="@+id/buttonReturn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Return to Daily Tasks"
-            android:layout_gravity="start"
+            android:layout_marginEnd="25sp"
+            android:text="@string/return_to_daily_tasks"
             style="?android:attr/buttonBarButtonStyle" />
 
         <Button
+            android:id="@+id/buttonAddMasterTask"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add Master Task"
-            android:layout_gravity="end"
+            android:text="@string/add_master_task"
             style="?android:attr/buttonBarButtonStyle" />
 
     </LinearLayout>

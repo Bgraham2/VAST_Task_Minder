@@ -9,4 +9,6 @@
     <string name="close">Close</string>
     <string name="add_task">Add Task</string>
     <string name="master_list_label">Master List</string>
+    <string name="return_to_daily_tasks">Return to Daily Tasks</string>
+    <string name="add_master_task">Add Master Task</string>
 </resources>
