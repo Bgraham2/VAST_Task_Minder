@@ -17,5 +17,14 @@ public class MasterListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.master_list_layout);
+
+        masterList = FileHelper.readMasterTasks(this);
+
+        initMasterListRecyclerView();
+
+    }
+
+    private void initMasterListRecyclerView() {
+
     }
 }

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class FileHelper {
     private static final String FILENAME = "dailyTask.dat";
-    private static final String FILENAMEMASTERLIST = "masterTask.dat";
+    private static final String FILENAME_MASTER_LIST = "masterTask.dat";
     private static final String TAG = "File Helper";
 
     public static void writeDailyTasks(ArrayList<String> items, Context context) {
@@ -60,7 +60,7 @@ public class FileHelper {
 
         try {
 
-            FileOutputStream fos = context.openFileOutput(FILENAMEMASTERLIST, Context.MODE_PRIVATE);
+            FileOutputStream fos = context.openFileOutput(FILENAME_MASTER_LIST, Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(items);
             oos.close();
@@ -81,7 +81,7 @@ public class FileHelper {
 
         try {
 
-            FileInputStream fis = context.openFileInput(FILENAMEMASTERLIST);
+            FileInputStream fis = context.openFileInput(FILENAME_MASTER_LIST);
             ObjectInputStream ois = new ObjectInputStream(fis);
             //noinspection unchecked
             itemList = (ArrayList<String>) ois.readObject();
