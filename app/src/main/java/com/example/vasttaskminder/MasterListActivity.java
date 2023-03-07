@@ -21,7 +21,10 @@ public class MasterListActivity extends AppCompatActivity {
         masterList = FileHelper.readMasterTasks(this);
 
         initMasterListRecyclerView();
+        initMasterAddButton();
+    }
 
+    private void initMasterAddButton() {
     }
 
     private void initMasterListRecyclerView() {
