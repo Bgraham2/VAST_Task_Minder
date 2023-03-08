@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements ReturnTask {
     }
 
     private void initDailyRecyclerView() {
-        Log.d(TAG, " RecyclerView init");
+        Log.d(TAG, " Daily RecyclerView init");
         dailyRecyclerView = findViewById(R.id.recyclerViewDaily);
         dailyRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         dailyRecyclerViewAdapter = new DailyRecyclerViewAdapter(this, dailyTasks);

@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import java.util.ArrayList;
 
-public class MasterListActivity extends AppCompatActivity {
+public class MasterListActivity extends AppCompatActivity implements ReturnMasterTask {
 
     private final static String TAG = "Master List Activity";
     private ArrayList<String> masterList;
@@ -25,9 +26,15 @@ public class MasterListActivity extends AppCompatActivity {
     }
 
     private void initMasterAddButton() {
+
     }
 
     private void initMasterListRecyclerView() {
+        Log.d(TAG, " Master RecyclerView init");
+    }
+
+    @Override
+    public void returnMasterTask(String task) {
 
     }
 }
