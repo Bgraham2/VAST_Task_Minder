@@ -8,33 +8,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-public class DailyDialogFragment extends androidx.fragment.app.DialogFragment {
-    public ReturnTask returnTask;
-    private static final String TAG = "Dialog Fragment ";
+public class MasterDialogFragment extends androidx.fragment.app.DialogFragment {
+    public ReturnMasterTask returnTask;
+    private static final String TAG = " Master Dialog Fragment ";
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
 
-        View dailyView = inflater.inflate(R.layout.add_daily_task_dialog, container, false);
+        View masterView = inflater.inflate(R.layout.add_master_task_dialog, container, false);
 
-        EditText dailyEditText = dailyView.findViewById(R.id.editTextDailyTask);
+        EditText masterEditText = masterView.findViewById(R.id.editTextMasterTask);
 
-        Button dailyClose = dailyView.findViewById(R.id.buttonCloseDaily);
-        dailyClose.setOnClickListener(view -> dismiss());
+        Button masterClose = masterView.findViewById(R.id.buttonCloseMaster);
+        masterClose.setOnClickListener(view -> dismiss());
 
-        Button dailyAddTask = dailyView.findViewById(R.id.buttonAddTaskDaily);
-        dailyAddTask.setOnClickListener(view -> {
-            String task = dailyEditText.getText().toString();
-            returnTask.returnDailyTask(task);
+        Button masterAddTask = masterView.findViewById(R.id.buttonAddTaskMaster);
+        masterAddTask.setOnClickListener(view -> {
+            String task = masterEditText.getText().toString();
+            returnTask.returnMasterTask(task);
             dismiss();
         });
 
-        return dailyView;
+        return masterView;
     }
 
     @Override
@@ -42,7 +43,7 @@ public class DailyDialogFragment extends androidx.fragment.app.DialogFragment {
         super.onAttach(context);
 
         try {
-            returnTask = (ReturnTask)getActivity();
+            returnTask = (ReturnMasterTask)getActivity();
         }
         catch (ClassCastException e) {
             Log.e(TAG, "onAttach: Failed");

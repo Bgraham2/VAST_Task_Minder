@@ -11,4 +11,6 @@
     <string name="master_list_label">Master List</string>
     <string name="return_to_daily_tasks">Return to Daily Tasks</string>
     <string name="add_master_task">Add Master Task</string>
+    <string name="add_to_master_list">Add To Master List</string>
+    <string name="add_a_task_to_master_list">Add A Task to Master List</string>
 </resources>
