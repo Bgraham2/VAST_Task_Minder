@@ -32,22 +32,14 @@ public class MasterListActivity extends AppCompatActivity implements ReturnMaste
 
     private void initReturnButton() {
         Button returnButton = findViewById(R.id.buttonReturn);
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+        returnButton.setOnClickListener(view -> finish());
     }
 
     private void initMasterAddButton() {
         Button masterAddButton = findViewById(R.id.buttonAddMasterTask);
-        masterAddButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                MasterDialogFragment masterDialogFragment = new MasterDialogFragment();
-                masterDialogFragment.show(getSupportFragmentManager(), "Master List Fragment");
-            }
+        masterAddButton.setOnClickListener(view -> {
+            MasterDialogFragment masterDialogFragment = new MasterDialogFragment();
+            masterDialogFragment.show(getSupportFragmentManager(), "Master List Fragment");
         });
     }
 
