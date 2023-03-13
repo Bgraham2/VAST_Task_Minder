@@ -28,6 +28,10 @@ public class MasterListActivity extends AppCompatActivity implements ReturnMaste
         initMasterListRecyclerView();
         initMasterAddButton();
         initReturnButton();
+        initItemTouch();
+    }
+
+    private void initItemTouch() {
     }
 
     private void initReturnButton() {
