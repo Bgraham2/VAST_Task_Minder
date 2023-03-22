@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 
-public class MainActivity extends AppCompatActivity implements ReturnTask {
+public class MainActivity extends AppCompatActivity implements ReturnTask, ReturnSelectedMasterTask {
     private final static String TAG = "Main Activity";
     private ArrayList<String> dailyTasks;
     private DailyRecyclerViewAdapter dailyRecyclerViewAdapter;
@@ -93,5 +94,11 @@ public class MainActivity extends AppCompatActivity implements ReturnTask {
         FileHelper.writeDailyTasks(dailyTasks, this);
         dailyRecyclerViewAdapter.notifyItemInserted(dailyTasks.size());
         Toast.makeText(this, newTask + " Added!", Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void returnSelectedTask(String task) {
+        TextView textViewSelected = findViewById(R.id.textViewSelected);
+        textViewSelected.setText(task);
     }
 }

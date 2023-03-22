@@ -48,6 +48,7 @@ public class MasterListActivity extends AppCompatActivity implements ReturnMaste
                 masterRecyclerViewAdapter.notifyItemRemoved(viewHolder.getAdapterPosition());
             }
         }).attachToRecyclerView(masterListRecyclerView);
+
     }
 
     private void initReturnButton() {
