@@ -98,6 +98,7 @@ public class MainActivity extends AppCompatActivity implements ReturnTask, Retur
 
     @Override
     public void returnSelectedTask(String task) {
+        Log.d(TAG, task + " returned");
         TextView textViewSelected = findViewById(R.id.textViewSelected);
         textViewSelected.setText(task);
     }
