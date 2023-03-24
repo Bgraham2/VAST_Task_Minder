@@ -8,9 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class MasterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     public TextView textViewDaily;
-    public ReturnSelectedMasterTask returnSelectedMasterTask = task -> {
-
-    };
+    public ReturnSelectedMasterTask returnSelectedMasterTask;
     private final static String TAG = "RecyclerView ViewHolder Master List";
 
     public MasterViewHolder(@NonNull View itemView) {
